@@ -1,0 +1,15 @@
+---
+name: website
+
+templates:
+  pre-start.erb: bin/pre-start
+
+packages: []
+
+properties:
+  nginx_docroot:
+    description: Nginx docroot
+    default: /var/vcap/store/nginx/www/document_root
+  github_repo:
+    description: github repository for site files
+    default: https://github.com/BlackrockDigital/startbootstrap-freelancer
