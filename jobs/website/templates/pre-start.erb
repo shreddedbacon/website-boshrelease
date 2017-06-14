@@ -1,5 +1,6 @@
 #!/bin/bash -ex
 NGINX_DIR=<%= p('nginx_docroot') %>
+rm -rf $NGINX_DIR
 #if [ ! -d $NGINX_DIR ]; then
 #  mkdir -p $NGINX_DIR
 #fi
