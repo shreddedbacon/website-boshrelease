@@ -4,6 +4,7 @@ NGINX_DIR=<%= p('nginx_docroot') %>
 #  mkdir -p $NGINX_DIR
 #fi
 #cd $NGINX_DIR
+apt-get install git -y
 git clone <%= p('github_repo') %> $NGINX_DIR
 
 
