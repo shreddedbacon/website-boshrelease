@@ -1,10 +1,8 @@
 #!/bin/bash -ex
 NGINX_DIR=<%= p('nginx_docroot') %>
-rm -rf $NGINX_DIR
-#if [ ! -d $NGINX_DIR ]; then
-#  mkdir -p $NGINX_DIR
-#fi
-#cd $NGINX_DIR
+if [ -d $NGINX_DIR ]; then
+  rm -rf $NGINX_DIR
+fi
 apt-get install git -y
 git clone <%= p('github_repo') %> $NGINX_DIR
 
