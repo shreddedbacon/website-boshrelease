@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 NGINX_DIR=<%= p('nginx_docroot') %>
-if [ -d $NGINX_DIR ]; then
+if [ -d "$NGINX_DIR" ]; then
   rm -rf $NGINX_DIR
 fi
 apt-get install git -y
