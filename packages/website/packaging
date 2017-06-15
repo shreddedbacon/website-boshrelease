@@ -1,5 +1,6 @@
 set -e -x
 
 echo "Moving site to install target"
-mv website/website-git.tar.gz ${BOSH_INSTALL_TARGET}
+tar xzvf website/website-git.tar.gz
+cp -a website-git ${BOSH_INSTALL_TARGET}
 
