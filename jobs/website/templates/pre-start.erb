@@ -4,7 +4,8 @@ apt-get install git -y
 if [[ -d "$NGINX_DIR" ]]; then
   rm -rf $NGINX_DIR
 fi
-git clone <%= p('github_repo') %> $NGINX_DIR
+#git clone <%= p('github_repo') %> $NGINX_DIR
+cp -a /var/vcap/packages/website/website-git $NGINX_DIR
 chown -R vcap:vcap $NGINX_DIR
 
 
